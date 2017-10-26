@@ -1,0 +1,20 @@
+.flexcontainercontacts {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#map {
+    width: 30vw;
+    height: 30vw;
+    max-width: 600px;
+    max-height: 600px;
+    background-image: url(images/Map.PNG);
+    background-position: center;   
+}
+
+#address {
+    flex: 0.2;
+    line-height: normal;
+    
+}
+

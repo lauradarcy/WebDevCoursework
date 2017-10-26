@@ -1,0 +1,376 @@
+/*RESET BORROWED FROM http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu*/
+
+/*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+
+
+
+
+/*---------------*/
+/* GENERAL       */
+/*---------------*/
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background-color:aliceblue;
+    color: black;
+    margin: 0px;
+}
+
+h1, p {
+    margin: 20px;
+    
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+
+section {
+    max-width: 900px;
+    margin: auto;
+}
+
+#section1 {
+    padding-top: 60px;
+}
+
+/*---------------------*/
+/*   NAVIGATION        */
+/*---------------------*/
+
+/*----------flexbox for navigation---------*/
+.navigation-container {
+	position: absolute;
+    top: 0;
+	width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    height: 6vw;
+    max-height: 50px;
+    margin:0;
+    align-items: center;
+    z-index: 10;
+}
+
+.navigation-container-sticky{
+    position: fixed;
+    background-color: aliceblue;
+    box-shadow: 0 2px 2px rgba(226, 234, 242, 0.83);
+}
+
+.navigation-item {
+    -webkit-flex:1;
+    flex:1;
+    margin: 5px;
+    box-sizing: border-box;
+    
+}
+
+/*-----------dropdown----------*/
+/* hide the dropdown button */
+
+@media(min-width : 750px) {
+    .dropbtn, .dropdown, .dropdown-content {
+        display:none;
+    }
+}
+
+
+
+/*-----links for navigation---------*/
+a.navlink {
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #555555;
+}
+
+a.navlink:hover {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+a.navlink:link {
+    color: #555555
+}
+a.navlink:visited{
+    color: #555555
+}
+
+/*---------------------*/
+/*   HEADER            */
+/*---------------------*/
+
+header {
+    background-image: url(images/banner3.jpg);
+    /*https://imgur.com/a/PsoyE*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 120vh;
+    margin-top:-20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1.header {
+    margin-top: 20vh;
+    line-height: 120px;
+    font-size: 5vw;
+    color: #555555;
+    text-shadow: 1px 0 0 rgba(240, 248, 255, 0.50), 0 -1px 0 rgba(240, 248, 255, 0.50), 0 1px 0 rgba(240, 248, 255, 0.50), -1px 0 0 rgba(240, 248, 255, 0.50);
+}
+
+
+#scroll {
+    line-height: 80vh;
+    font-size: 5vw;
+    text-align: center;
+}
+
+img {
+    height:2.9vw;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+
+/*----------------------------------*/
+/*        "PACKAGES" SECTION        */
+/*----------------------------------*/
+
+/* --------links for packages section-------- */
+
+a.packagelink {
+    text-decoration: none;
+    color: aliceblue;
+    text-shadow: 1.1px 0 0 black, 0 -1.1px 0 black, 0 1.1px 0 black, -1.1px 0 0 black;
+    /*-webkit-text-stroke: .01px #555555;*/
+}
+
+a.packagelink:hover {
+    text-decoration: underline;
+}
+a.packagelink:link {
+    /*color: aliceblue;*/
+}
+a.packagelink:visited{
+   /* color: aliceblue;*/
+}
+
+
+/* --------------flexbox formatting for packages section-------- */
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#packages{
+    background: black;
+    /*background black so when opacity of images is changed, the picture darkens*/
+    max-width: none;
+}
+
+.flex-container-column {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+.flex-item {
+    padding: 0;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 3vw;
+    text-align: center;
+    
+    
+    background-position: center;
+    background-size: 120%; /*https://codepen.io/fchaussin/pen/MyKbYB for use of background size to zoom*/
+    overflow: hidden;
+    opacity: 0.75;
+    
+    transition: opacity 1s;
+    transition: background-size .4s linear;
+    
+}
+
+.flex-item:hover {
+    opacity: 1;
+    background-size: 110%;
+    cursor: pointer;
+}
+
+/*flexbox for 3 different box sizes: small square (s), large square (large), rectangle (r)*/
+
+.s {
+    font-size: 2vw;
+    width: 16.666vw;
+    height: 16.666vw;
+    
+    line-height: 16.666vw;
+}
+
+.large {
+  width: 33.333vw;
+  height: 33.333vw;
+  
+  line-height: 33.333vw;
+}
+
+.r {   
+    width: 33.333vw;
+    height: 16.666vw;
+    
+    line-height: 16.666vw;
+}
+
+
+ /*---------pictures for packages section---------------*/
+
+#grouplearning {
+    background-image: url(images/grouplearning.jpg);
+}
+
+#wreckdiving {
+    background-image: url(images/wreck1.jpg)
+    /*https://i.pinimg.com/originals/31/8e/23/318e23c04894df1b38cf6d03be33e54e.jpg*/
+}
+
+#icediving {
+    background-image: url(images/icedive.jpg)
+}
+
+#cavediving {
+    background-image: url(images/cave.jpg)
+}
+
+#nightdiving {
+    background-image: url(images/night.jpg)
+}
+
+#techdiving {
+    background-image: url(images/tech.jpg)
+}
+
+#ourpackages {
+    background-image: url(images/boat.jpg);    
+}
+
+
+
+/*----------------------------*/
+/*     VIDEO CONTAINER        */
+/*----------------------------*/
+
+/* code borrowed and edited from https://medium.com/@rishabhaggarwal2/tutorial-how-to-do-full-screen-youtube-video-embeds-without-any-black-bars-faa778db499c*/
+.videoContainer {
+  
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+    width: 79.9vw;
+    height: 45vw;
+    max-width: 800px;
+    max-height: 450px;
+}
+
+
+
+
+/*-------------------*/
+/* MEMBERSHIP OPTIONS*/
+/*-------------------*/
+
+/* these flex-containers are also used in the footer and on the contact page, packages page etc */
+.flex-containermaxwidth {
+    max-width: 800px;
+    margin: auto;
+}
+
+.flexitemmaxwidth{
+    -webkit-flex:1;
+    flex:1;
+    padding: 0;
+    margin: 0px;
+    text-align: center;
+}
+
+
+
+.leftborder {
+    border-left:.2vw solid green; /*https://www.w3schools.com/howto/howto_css_vertical_line.asp*/
+    
+}
+
+
+/*-------------------*/
+/* FOOTER            */
+/*-------------------*/
+
+
+footer {
+    margin-top: 2vw;
+    background: #2f2f2f;
+    color: aliceblue;
+    padding: 1vw;
+    
+}
+footer p {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+
+footer a {
+    color: aliceblue;
+}
+
+.borderfooter {
+    border-left: .1vw solid aliceblue;
+}
