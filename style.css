@@ -53,8 +53,7 @@ section {
 	width: 100%;
     display: -webkit-flex;
     display: flex;
-    height: 6vw;
-    max-height: 50px;
+    height: 45px;
     margin:0;
     align-items: center;
     z-index: 10;
