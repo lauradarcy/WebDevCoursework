@@ -16,3 +16,5 @@ $(document).ready(function() {
         })*/
 
 });
+
+/*script edited from https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2620092?start=525*/

@@ -16,6 +16,7 @@ body {
     text-align: center;
     background-color:aliceblue;
     color: black;
+    /*https://webaim.org/resources/contrastchecker/ suggests this is a valid contrast level*/
     margin: 0px;
 }
 
@@ -24,13 +25,17 @@ h1, p {
     
 }
 
-p {
-    text-align: justify;
+h2 {
+    font-size: 2em;
+    margin: auto;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 4vw;
+p {
+    text-align: justify;
+    line-height: 1.1;
 }
+
 
 
 section {
@@ -39,6 +44,7 @@ section {
 }
 
 #section1 {
+    /*Give the first section on each page additional padding*/
     padding-top: 60px;
 }
 
@@ -74,11 +80,12 @@ section {
 }
 
 /*-----------dropdown----------*/
-/* hide the dropdown button */
+
 
 @media(min-width : 750px) {
     .dropbtn, .dropdown, .dropdown-content {
         display:none;
+        /* hide the dropdown button when in desktop sizes */
     }
 }
 
@@ -123,6 +130,7 @@ header {
 }
 
 h1.header {
+    /*"dive in" banner text*/
     margin-top: 20vh;
     line-height: 120px;
     font-size: 5vw;
@@ -131,13 +139,8 @@ h1.header {
 }
 
 
-#scroll {
-    line-height: 80vh;
-    font-size: 5vw;
-    text-align: center;
-}
-
 img {
+    /*used for the logo in the navigation bar*/
     height:2.9vw;
     max-height: 40px;
     overflow: hidden;
@@ -186,12 +189,13 @@ a.packagelink:visited{
     justify-content: space-around;
 }
 
-#packages{
+#packagesouter, #packagesinner{
     background: black;
     /*background black so when opacity of images is changed, the picture darkens*/
     max-width: none;
 }
 
+/*to make the staggered image design for the packages, a nesting of rows and columns is required*/
 .flex-container-column {
     padding: 0;
     margin: 0;
@@ -261,6 +265,7 @@ a.packagelink:visited{
 
 #grouplearning {
     background-image: url(images/grouplearning.jpg);
+    /*image from a friend*/
 }
 
 #wreckdiving {
@@ -270,22 +275,28 @@ a.packagelink:visited{
 
 #icediving {
     background-image: url(images/icedive.jpg)
+    /*Daniel Botelho https://www.scubadiving.com/ice-diving-narwhals-baffin-island#page-7*/
 }
 
 #cavediving {
     background-image: url(images/cave.jpg)
+    /*https://semestafakta.wordpress.com/2015/03/28/61-fakta-menarik-tentang-bahama/*/
 }
 
 #nightdiving {
     background-image: url(images/night.jpg)
+    /*http://www2.padi.com/blog/wp-content/uploads/2015/04/night-dive-squid-Lembeh-Indonesia-e1458928807870.jpg*/
 }
 
 #techdiving {
     background-image: url(images/tech.jpg)
+    /*http://www.smh.com.au/sport/doc-deep-guy-garman-dies-in-attempt-to-break-world-record-scuba-dive-20150817-gj1ebb.html*/
+    /*in retrospect a pretty dark article to get a picture from*/
 }
 
 #ourpackages {
-    background-image: url(images/boat.jpg);    
+    background-image: url(images/boat.jpg)
+    /*https://moneypacers.com/2016/02/worlds-6-best-sailing-destinations/*/
 }
 
 
@@ -327,6 +338,7 @@ iframe {
 .flex-containermaxwidth {
     max-width: 800px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .flexitemmaxwidth{
@@ -340,8 +352,19 @@ iframe {
 
 
 .leftborder {
-    border-left:.2vw solid green; /*https://www.w3schools.com/howto/howto_css_vertical_line.asp*/
+    /*makes the lines between the sections*/
+    border-left:2px solid #555555; /*https://www.w3schools.com/howto/howto_css_vertical_line.asp*/
     
+}
+
+ul {
+    display: inline-block;
+    padding-top: 10px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.2;
+    list-style: circle;
+    list-style-position: inside;
 }
 
 
@@ -357,6 +380,10 @@ footer {
     padding: 1vw;
     
 }
+
+footer h2 {
+    display: none;
+}
 footer p {
     text-align: center;
     max-width: 900px;
@@ -371,5 +398,6 @@ footer a {
 }
 
 .borderfooter {
+    /*makes the little lines between the links*/
     border-left: .1vw solid aliceblue;
 }

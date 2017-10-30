@@ -1,6 +1,11 @@
-/*media query used from http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu*/
+
+/*-------------------------------------------------*/
+/*             NAVIGATION                          */
+/*-------------------------------------------------*/
+
 
 @media(max-width : 750px) {
+    /*media query for the navigation bar used from http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu*/
     nav {
         display: none;
     }
@@ -55,9 +60,12 @@
 
 }
 
-
+/*-------------------------------------------------*/
+/*             FLEXBOX FOR PACKAGES                */
+/*-------------------------------------------------*/
 @media(max-width : 750px) {
-    #packages {
+    #packagesinner {
+        /*changes the ordering of the "packages" images from a row to a column*/
         -webkit-flex-flow: column nowrap;
         justify-content: center;
         
@@ -87,12 +95,18 @@
     }
     
     .borderfooter {
+        /*remove the line between the links in the footer when on mobile to make it easier to read*/
         border-left: .1vw solid rgba(240, 248, 255, 0);
     }
 }
 
+/*-------------------------------------------------*/
+/*            CONTACTS PAGE                        */
+/*-------------------------------------------------*/
+
 @media(max-width : 750px) {
     .flexcontainercontacts {
+        /*put the map underneath the contact info for mobile site*/
         -webkit-flex-flow: column nowrap;
         justify-content: center;
     }

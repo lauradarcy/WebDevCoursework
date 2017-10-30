@@ -5,6 +5,7 @@
 }
 
 .answer {
+    /*hide answer until selected*/
     display: none;
 }
 
@@ -23,11 +24,13 @@
 }
 
 .question:focus {
-    text-align: left;
+    /*bold selected question*/
     font-weight: bold;
 }
 .question:focus .answer{
-    display:block;
+    /*show answer when selected*/
+    display:inherit;
+    padding: 20px;
     font-weight: normal;
 }
 
